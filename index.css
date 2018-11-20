@@ -1,0 +1,110 @@
+:root { 
+    --direct-speech-color: coral;
+    --direct-speech-background-color: gainsboro; 
+    --direct-speech-font-style: italic; 
+    --part-text-shadow: 5pt 5px 3pt black; 
+    --part-text-align: center; 
+    --p-text-indent: 1.5em; 
+    --global-font-family: Arial; 
+    --contents-list-style: square; 
+    --link-color: blue; 
+    --visited-color: crimson; 
+    --p-border-left: 4px solid coral; 
+    --img-width: 100%; 
+    --imgh-margin: 20px 0px; 
+    --first-letter-color: coral; 
+    --first-letter-font-style: italic; 
+    --first-letter-font-size: 1.5em; 
+    --election-color: coral; 
+    --selection-background-color: gainsboro; 
+    --story-margin-left: 140px; 
+    --contents-block-width: 8.7rem; 
+    --contents-block-top: 40%; 
+    --contents-block-position: fixed; 
+    --contents-block-border-bottom: 3px dotted black; 
+    --part-border-bottom: 3px dotted black; 
+    --story-border-left: 3px dotted black; 
+    }
+
+a { 
+text-decoration:none; 
+} 
+p:hover{ 
+border-left:var(--p-border-left); 
+} 
+a:link { 
+color:var(--link-color); 
+} 
+a:visited { 
+color:crimson; 
+} 
+.direct-speech { 
+color: var(--direct-speech-color); 
+background-color: var(--direct-speech-background-color); 
+font-style: var(--direct-speech-font-style); 
+} 
+#header { 
+text-align: center; 
+text-transform: uppercase; 
+text-decoration: double underline red; 
+} 
+h1:hover::before,h2:hover::before { 
+content:"#"; 
+color:coral; 
+} 
+
+#part1, 
+#part2, 
+#part3 { 
+    text-align: var(--part-text-align); 
+    text-shadow: var(--part-text-shadow); 
+    position: sticky; 
+    top: 0; 
+    padding-left: 10px; 
+    border-bottom: var(--part-border-bottom); 
+    margin-left: -10px; 
+    background-color: rgba(255, 255, 255,80%); 
+} 
+p { 
+text-indent: 15px; 
+text-align: justify; 
+} 
+
+* { 
+font-family: var(--global-font-family); 
+} 
+#content { 
+list-style-type: var(--contents-list-style); 
+text-transform: uppercase; 
+} 
+img { 
+width:100%; 
+} 
+h1,h2,img { 
+margin: 20px 0px; 
+} 
+h2+p::first-letter { 
+color:coral; 
+font-size:20px; 
+} 
+*::selection { 
+background-color:coral; 
+color:gainsboro; 
+} 
+#story { 
+padding-left: 10px; 
+border-left: 3px dotted black; 
+margin-left: 140px; 
+} 
+#contents-block { 
+position: fixed; 
+z-index: 1; 
+width: 140px;
+top: 40vh; 
+border-bottom: 3px dotted black; 
+
+} 
+
+p:not(.direct-speech):first-line { 
+font-style: italic; 
+}
